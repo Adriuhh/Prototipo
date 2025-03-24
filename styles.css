@@ -1,0 +1,214 @@
+/* Estilos Generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #96c796;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Impide que aparezca la barra lateral */
+}
+
+/* Cuadro verde en la esquina superior de la página */
+.prototype-box {
+    background-color: #28a745; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 999; /* Asegurarse de que se quede por encima de otros elementos */
+}
+
+/* Estilo del móvil */
+.mobile {
+    width: 375px;
+    height: 667px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Permitir desplazamiento */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabecera del teléfono */
+.header {
+    background-color: #28a745; /* Verde */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Estilos para el perfil del usuario */
+.profile {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Contenido */
+.content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    display: none;
+    text-align: center;
+}
+
+.page h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.page p {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Cuadros de anuncios */
+.ads {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.ad-box {
+    background-color: #e0e0e0;
+    padding: 15px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los botones de acción */
+.action-btn {
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.action-btn:hover {
+    background-color: #218838; /* Verde más oscuro */
+}
+
+/* Estilo para las opciones de suscripción */
+.pricing {
+    display: flex;
+    flex-direction: column; /* Apilarlos uno sobre el otro */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.price-card {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 10px 0; /* Espacio entre los cards */
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.price-card h3 {
+    font-size: 18px;
+    color: #28a745;
+}
+
+.price-card p {
+    color: #555;
+}
+
+.subscribe-btn {
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.subscribe-btn:hover {
+    background-color: #218838; /* Verde más oscuro */
+}
+
+/* Sección para regalar suscripción */
+.gift-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.gift-form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.gift-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.gift-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Pie de página con botonera */
+.footer {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.nav-btn {
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+    text-align: center;
+}
+
+.nav-btn:hover {
+    background-color: #218838; /* Verde más oscuro */
+}

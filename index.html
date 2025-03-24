@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyPark App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cuadro verde en la esquina superior de la página -->
+    <div class="prototype-box">Prototipo de EasyPark</div>
+
+    <div class="mobile">
+        <div class="header">
+            <!-- Íconos y nombre de la app -->
+            <div class="profile">
+                <img src="descarga.png" alt="Perfil" class="profile-icon"> <br>Adrian
+            </div>
+            <h1>EasyPark</h1>
+        </div>
+
+        <div class="content">
+            <!-- Página de inicio -->
+            <div class="page" id="homePage">
+                <h2>Bienvenido a EasyPark</h2>
+                <p>Gestiona tu estacionamiento de forma sencilla y rápida.</p>
+
+                <!-- Cuadros de anuncios -->
+                <div class="ads">
+                    <div class="ad-box">Anuncio 1</div>
+                    <div class="ad-box">Anuncio 2</div>
+                </div>
+
+                <div class="card">
+                    <h3>¿Cómo funciona?</h3>
+                    <p>Fácil y rápido: visualiza los aparcamientos disponibles o realiza la suscripcion y olvidate de los anuncios</p>
+                </div>
+                <button class="action-btn" onclick="showPage('mapPage')">Ver Mapa en Tiempo Real</button>
+                <button class="action-btn" onclick="showPage('subscriptionPage')">Ver Suscripciones</button>
+            </div>
+
+            <!-- Página del mapa en tiempo real -->
+            <div class="page" id="mapPage">
+                <h2>Mapa en Tiempo Real</h2>
+                <p>Accede al mapa interactivo para ver la disponibilidad de estacionamientos.</p>
+                <!-- Imagen del mapa -->
+                <img src="istockphoto-1398268546-612x612.jpg" width="300px" alt="Mapa en Tiempo Real" class="map-image" id="mapImage" onclick="expandImage()">
+                <button class="action-btn" onclick="showPage('homePage')">Volver al Inicio</button>
+            </div>
+
+            <!-- Página de suscripción -->
+            <div class="page" id="subscriptionPage">
+                <h2>Suscripción</h2>
+                <p>Elimina los anuncios y contribuye a nuestra empresa.</p>
+                <div class="pricing">
+                    <!-- Opciones de suscripción apiladas -->
+                    <div class="price-card">
+                        <h3>Plan Mensual</h3>
+                        <p>0,99€ al mes</p>
+                        <button class="subscribe-btn" onclick="showPage('paymentPage')">Realizar Pago</button>
+                    </div>
+                    <div class="price-card">
+                        <h3>Plan Anual</h3>
+                        <p>9,99€ al año</p>
+                        <button class="subscribe-btn" onclick="showPage('paymentPage')">Realizar Pago</button>
+                    </div>
+                </div>
+
+                <!-- Opción para regalar suscripción -->
+                <div class="gift-section">
+                    <h3>Regala una suscripción</h3>
+                    <button class="subscribe-btn" onclick="showPage('giftPage')">Regalar Suscripción</button>
+                </div>
+
+                <button class="action-btn" onclick="showPage('homePage')">Volver al Inicio</button>
+            </div>
+
+            <!-- Página de pago y selección de plan -->
+            <div class="page" id="paymentPage">
+                <h2>Selecciona el Plan para Realizar el Pago</h2>
+                <p>Elige el plan que prefieras para finalizar tu pago:</p>
+                <div class="pricing">
+                    <div class="price-card">
+                        <h3>Plan Mensual</h3>
+                        <p>0,99€ al mes</p>
+                        <button class="subscribe-btn">Realizar Pago</button>
+                    </div>
+                    <div class="price-card">
+                        <h3>Plan Anual</h3>
+                        <p>9,99€ al año</p>
+                        <button class="subscribe-btn">Realizar Pago</button>
+                    </div>
+                </div>
+
+                <!-- Formulario para pago -->
+                <div class="payment-form" id="paymentForm">
+                    <form>
+                        <input type="text" placeholder="Nombre completo" required><br>
+                        <input type="text" placeholder="Número de tarjeta" required><br>
+                        <input type="month" placeholder="Fecha de expiración" required><br>
+                        <input type="text" placeholder="Código de seguridad" required><br>
+                        <button type="submit" class="subscribe-btn">Confirmar Pago</button>
+                    </form>
+                </div>
+
+                <button class="action-btn" onclick="showPage('homePage')">Volver al Inicio</button>
+            </div>
+
+            <!-- Página de regalar suscripción -->
+            <div class="page" id="giftPage">
+                <h2>Regala una Suscripción</h2>
+                <p>Selecciona el plan que deseas regalar y completa los datos del destinatario:</p>
+                
+                <!-- Selección de plan para regalar -->
+                <div class="pricing">
+                    <div class="price-card">
+                        <h3>Plan Mensual</h3>
+                        <p>0,99€ al mes</p>
+                        <button class="subscribe-btn">Regalar</button>
+                    </div>
+                    <div class="price-card">
+                        <h3>Plan Anual</h3>
+                        <p>9,99€ al año</p>
+                        <button class="subscribe-btn">Regalar</button>
+                    </div>
+                </div>
+
+                <!-- Formulario para regalar -->
+                <div class="gift-form">
+                    <form>
+                        <input type="text" placeholder="Nombre del destinatario" required><br>
+                        <input type="email" placeholder="Correo electrónico" required><br>
+                        <button type="submit" class="subscribe-btn">Enviar Regalo</button>
+                    </form>
+                </div>
+
+                <button class="action-btn" onclick="showPage('homePage')">Volver al Inicio</button>
+            </div>
+        </div>
+
+        <!-- Footer y botones de navegación -->
+        <div class="footer">
+            <button class="nav-btn" onclick="showPage('homePage')">Inicio</button>
+            <button class="nav-btn" onclick="showPage('mapPage')">Mapa</button>
+            <button class="nav-btn" onclick="showPage('subscriptionPage')">Suscripciones</button>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Ocultar todas las páginas
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.style.display = 'none');
+
+            // Mostrar la página seleccionada
+            const selectedPage = document.getElementById(pageId);
+            selectedPage.style.display = 'block';
+        }
+
+        // Mostrar la página principal al inicio
+        showPage('homePage');
+
+        // Función para ampliar la imagen del mapa
+        function expandImage() {
+            const image = document.getElementById('mapImage');
+            if (image.style.transform === 'scale(2)') {
+                image.style.transform = 'scale(1)';
+            } else {
+                image.style.transform = 'scale(2)';
+            }
+        }
+    </script>
+</body>
+</html>
